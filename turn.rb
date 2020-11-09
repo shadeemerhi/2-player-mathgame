@@ -10,20 +10,14 @@ class Turn
   end
 
   def question_statement
-    "#{@game.current_player.name}: What does #{@question.num2} plus #{@question.num1} equal?"
-  end
-
-  def response
-    right_answer ? "YES! You are correct!" : "Seriously? No!"
+    "#{@game.current_player.name}: What does #{@question.num2} plus #{@question.num1} equal?\n\n"
   end
 
   def new_turn
-    "----- NEW TURN -----"
+    "----- NEW TURN -----\n\n"
   end
 
-  private
-
-  def right_answer
+  def check_answer
     @player_answer == @question.answer
   end
 
