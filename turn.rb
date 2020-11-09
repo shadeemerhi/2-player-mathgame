@@ -1,6 +1,6 @@
 class Turn
-  def initialize(game, question)
-    @game = game
+  def initialize(current_player, question)
+    @current_player = current_player
     @question = question
     @player_answer = nil
   end
@@ -10,7 +10,7 @@ class Turn
   end
 
   def question_statement
-    "#{@game.current_player.name}: What does #{@question.num2} plus #{@question.num1} equal?\n\n"
+    "#{@current_player.name}: What does #{@question.num2} plus #{@question.num1} equal?\n\n"
   end
 
   def new_turn
