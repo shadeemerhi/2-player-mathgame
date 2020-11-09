@@ -35,7 +35,7 @@ class Game
   end
 
   def game_over
-    "----- GAME OVER -----"
+    "----- GAME OVER -----\n\n"
   end
 
 end
